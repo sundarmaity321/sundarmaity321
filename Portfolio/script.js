@@ -1,3 +1,17 @@
+// Js certifiactes
+function openPopup(imageUrl) {
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+  popupImg.src = imageUrl;
+  popup.classList.add("active");
+}
+
+function closePopup() {
+  const popup = document.getElementById("popup");
+  popup.classList.remove("active");
+}
+
+
 // JS for Floating Weather
 const API_KEY = "443697e340b062669ad563fef0c0d09e"; // Replace with your OpenWeatherMap API Key
 
