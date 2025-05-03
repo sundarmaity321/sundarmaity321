@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai Chat Assistent</title>
+    <link rel="stylesheet" href="ACA.css" />
+  </head>
+
+  <body>
+    <div class="chat-container">
+      <div class="ai-chat-box">
+        <img src="ai.png" alt="" id="aiImage" width="15%" />
+        <div class="ai-chat-area">
+          <span id="text"></span>
+        </div>
+      </div>
+    </div>
+    <div class="prompt-area">
+      <input type="text" id="prompt" placeholder="Express Your Thinking..." />
+      <button id="image">
+        <img src="img.svg" class="img" alt="" />
+        <input type="file" accept="images/*" hidden />
+      </button>
+      <button id="submit">
+        <img src="submit.svg" class="submit" alt="" />
+      </button>
+      <br /><br />
+    </div>
+    <div class="copyright">Made With ❤️ By Sundar Maity</div>
+    <script src="ACA.js"></script>
+  </body>
+</html>
