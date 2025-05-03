@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To My Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #07252d;
+        color: white;
+      }
+      .typing-container {
+        /* font-size:30px; */
+        font-weight: bold;
+        position: relative;
+        font-size: 4em;
+        letter-spacing: 10px;
+        color: #0e3742;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #000);
+        line-height: 0.7em;
+        outline: none;
+        animation: animate 5s linear infinite;
+      }
+      .cursor {
+        display: inline-block;
+        width: 5px;
+        height: 20px;
+        background-color: white;
+        margin-left: 5px;
+        animation: blink 0.8s infinite;
+      }
+      /* * Container for the button * */
+      .container {
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        transform: translate(-50% -60%);
+      }
+
+      /* Glowing hyperlink styled as a button */
+      .glow-link-button {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        background-color: #1e1e1e;
+        border: 2px solid #03bcf4;
+        border-radius: 30px;
+        box-shadow: 0 0 10px #03bcf4;
+        transition: all 0.1s ease;
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+      }
+
+      /* Glow effect on hover */
+      .glow-link-button:hover {
+        background-color: #00ffcc;
+        color: #000000;
+        box-shadow: 0 0 20px #03bcf4, 0 0 30px #03bcf4 0 0 40px #03bcf4;
+        transform: scale(1.1);
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      @keyframes animate {
+        0%,
+        18%,
+        20%,
+        50.1%,
+        60%,
+        65.15%,
+        80%,
+        90.1%,
+        92% {
+          color: #0e3742;
+          text-shadow: none;
+        }
+        18.1%,
+        20.1%,
+        30%,
+        50%,
+        60.1%,
+        65%,
+        80.1%,
+        90%,
+        92.1%,
+        100% {
+          color: #ffff;
+          text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+            0 0 80px #03bcf4, 0 0 160px #03bcf4, 0 0 10px #03bcf4;
+        }
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 10px #03bcf4;
+        }
+        50% {
+          box-shadow: 0 0 25px #03bcf4;
+        }
+        100% {
+          box-shadow: 0 0 10px #03bcf4;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="typing-container">
+      <span id="text"></span>
+      <span class="cursor"></span>
+    </div>
+
+    <div class="container" id="btn">
+      <a
+        href="Portfolio/Index.html"
+        class="glow-link-button"
+        onclick="explore()"
+        >Explore</a
+      >
+    </div>
+
+    <script>
+      const words = [
+        "Hello!🥰",
+        "Welcome To My Portfolio🙏🏻",
+        "I'm SUNDAR MAITY...",
+      ];
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const speed = 150;
+      const delay = 1000;
+      const textElement = document.getElementById("text");
+
+      function typeEffect() {
+        const currentWord = words[wordIndex];
+
+        if (isDeleting) {
+          textElement.textContent = currentWord.substring(0, charIndex--);
+        } else {
+          textElement.textContent = currentWord.substring(0, charIndex++);
+        }
+
+        if (!isDeleting && charIndex === currentWord.length + 1) {
+          isDeleting = true;
+          setTimeout(typeEffect, delay);
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(typeEffect, 200);
+        } else {
+          setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
+        }
+      }
+      function explore() {
+        alert("This Portfolio Make For Desktop or Laptop Only.");
+      }
+      typeEffect();
+    </script>
+  </body>
+</html>
