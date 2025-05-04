@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
     projects: {
       question: "My Projects",
       answer: "I have done some projects in HTML and CSS in JavaScript.",
-      url: "/Show More/show.html",
+      url: "..//Show More/show.html",
       followups: {
         project_details: {
           question: "Project Details",
