@@ -1,3 +1,47 @@
+// Script for auto writing my name
+const words = [
+  "SUNDAR MAITY",
+  "সুন্দর মাইতি",
+  "सुंदर माईती",
+  "ସୁନ୍ଦର ମା ity ୀ",
+  "சுந்தர் மைதி",
+  "సుందర్ మైటీ",
+  "ਸੁੰਦਰ ਮੈਟੀ",
+  "སུན་དར་མའི་ཏི།",
+  "سوندار مايتي",
+];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const speed = 150;
+const delay = 1000;
+const textElement = document.getElementById("text");
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (isDeleting) {
+    textElement.textContent = currentWord.substring(0, charIndex--);
+  } else {
+    textElement.textContent = currentWord.substring(0, charIndex++);
+  }
+
+  if (!isDeleting && charIndex === currentWord.length + 1) {
+    isDeleting = true;
+    setTimeout(typeEffect, delay);
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeEffect, 200);
+  } else {
+    setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
+  }
+}
+function explore() {
+  alert("This Portfolio Make For Desktop or Laptop Only.");
+}
+typeEffect();
+
 // Js certifiactes
 function openPopup(imageUrl) {
   const popup = document.getElementById("popup");
