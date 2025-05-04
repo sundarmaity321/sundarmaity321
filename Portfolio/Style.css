@@ -158,12 +158,13 @@ nav ul li a::after {
   transition: 0.3s;
   border-radius: 10px;
 }
-#my-name {
+#text {
   font-size: 80%;
-  font-family: LOGOTYPE Medium, sans-serif;
+  color: #00f0ff;
+  font-family: Cinzel;
 }
-#my-name:hover {
-  color: #033e42;
+#text:hover {
+  color: #07373a;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
