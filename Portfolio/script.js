@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let chatVisible = false;
 
   // Enhanced Knowledge Base with URLs and follow-ups
-  const knowledgeBase = {
+ const knowledgeBase = {
     about: {
       question: "About My Self",
       answer:
