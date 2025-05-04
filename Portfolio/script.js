@@ -236,72 +236,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Enhanced Knowledge Base with URLs and follow-ups
   const knowledgeBase = {
-    password: {
-      question: "How do I reset my password?",
+    about: {
+      question: "About My Self",
       answer:
-        "You can reset your password by clicking 'Forgot Password' on the login page. We'll send a reset link to your email.",
-      url: "/password-reset",
+        "I am in Pre final year in Diploma in CSE from BRAINWARE UNIVERSITY.Know more in my CV.",
+      url: "Sundar Maity (cv).pdf",
       followups: {
-        no_reset_email: {
-          question: "What if I don't receive the reset email?",
+        my_skills: {
+          question: "My Skills",
           answer:
-            "Check your spam folder first. If it's not there, wait 10 minutes or request another reset link.",
-          url: "/help/password-issues",
+            " My skills are HTML and CSS, I have some knowledge in JavaScript and Python. My projects are based on HTML,CSS also some of Java Script.",
+          // url: "/Show More/show.html",
           followups: {},
         },
-        no_email_access: {
-          question: "Can I reset without email access?",
+        my_hobby: {
+          question: "My Hobbies",
           answer:
-            "Contact our support team with proof of identity to verify your account.",
-          url: "/contact-support",
+            "My hobbies are playing cricket, watching movies,reading book, and listening to music and Storys.",
+          // url: "#",
           followups: {},
         },
       },
     },
-    hours: {
-      question: "What are your business hours?",
+    ability: {
+      question: "My Strength",
       answer:
-        "Our team is available Monday-Friday, 9AM-6PM EST. Automated support is available 24/7.",
-      url: "index.html",
+        "I am a quick learner and a good team player. I can work under pressure and meet deadlines.I am punctual, also have leadership ability.",
+      // url: "#",
       followups: {
-        weekend: {
-          question: "Do you offer weekend support?",
+        weakness: {
+          question: "My Weakness",
           answer:
-            "We have limited weekend support from 10AM-4PM EST on Saturdays.",
-          url: "/weekend-support",
+            "I am a little bit lazy and I am not good at public speaking.",
+          // url: "#",
           followups: {},
         },
       },
     },
-    orders: {
-      question: "Where can I find my order history?",
-      answer:
-        "Log into your account and visit 'My Orders' in your dashboard to view all past orders.",
-      url: "/account/orders",
+    projects: {
+      question: "My Projects",
+      answer: "I have done some projects in HTML and CSS in JavaScript.",
+      url: "/Show More/show.html",
       followups: {
-        download: {
-          question: "Can I download my order history?",
+        project_details: {
+          question: "Project Details",
           answer:
-            "Yes, click the 'Export' button in the top-right corner of your order history page.",
-          url: "/help/export-orders",
+            "I have done a project on a portfolio website using HTML and CSS also Java Script (My Portfolio WebSite).",
+          url: "index.html",
           followups: {},
         },
       },
     },
-    refunds: {
-      question: "Do you offer refunds?",
+    contact: {
+      question: "Contact With Me",
       answer:
-        "We offer 30-day refunds for most products. See our Refund Policy for exceptions.",
-      url: "/refund-policy",
-      followups: {
-        process_time: {
-          question: "How long do refunds take?",
-          answer:
-            "Refunds typically process in 5-7 business days after we receive your return.",
-          url: "/refund-process",
-          followups: {},
-        },
-      },
+        "E-mail: sundarmaity111@gmail.com    Phone Number: +91 7319185590",
     },
   };
 
