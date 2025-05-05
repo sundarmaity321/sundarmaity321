@@ -10,6 +10,20 @@
   --text-dark: #fff;
   --primary: #008cba;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 95%;
+  color: #ffffff;
+  background-color: #262626;
+  background-image: url(./images/background\ 15.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 /* CSS for moving text */
 .ticker-container {
   width: 104%;
@@ -44,21 +58,6 @@
   color: aqua;
   font-family: JasmineUPC, sans-serif;
   font-size: 90px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  width: 95%;
-  color: #ffffff;
-  background-color: #262626;
-  background-image: url(./images/background\ 25.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 /* header section */
@@ -161,15 +160,28 @@ nav ul li a::after {
 #text {
   font-size: 80%;
   color: #00f0ff;
-  font-family: Cinzel;
+  font-family: Henotica, sans-serif;
 }
 #text:hover {
+  font-size: 80%;
   color: #07373a;
+  font-family: Henotica, sans-serif;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
+/* #my-name {
+  font-size: 80%;
+  font-family: LOGOTYPE Medium, sans-serif;
+}
+#my-name:hover {
+  color: #033e42;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+} */
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00f0ff,
@@ -232,8 +244,8 @@ nav ul li a:hover::after {
   transition: transform 0.3s;
 }
 .sosial-icons a:hover {
-  color: black;
-  filter: drop-shadow(0px 0px 10px white) drop-shadow(0px 0px 10px white);
+  color: #00f0ff;
+  filter: drop-shadow(0px 0px 20px #00f0ff) drop-shadow(0px 0px 0px #00f0ff);
   transform: translateY(-5px);
 }
 #cv {
@@ -254,7 +266,7 @@ nav ul li a:hover::after {
 /* About section */
 #about {
   width: 100%;
-  background: transparent;
+  backdrop-filter: blur(10px);
   border-radius: 25px;
   margin-left: 30px;
   margin-top: 50px;
@@ -275,14 +287,15 @@ nav ul li a:hover::after {
 
 .blur {
   position: absolute;
-  width: 14%;
-  height: 56%;
-  backdrop-filter: blur(10px);
+  width: 0%;
+  height: 0%;
+  backdrop-filter: blur(20px);
   z-index: 2;
   flex-basis: 25%;
   transition: z-index 0.3s, transform 0.3s;
+  transform: rotate(10deg);
   border-radius: 15px;
-  top: 125%;
+  top: 17%;
 }
 .about-col-1 .layer1 {
   flex-basis: 35%;
@@ -301,18 +314,19 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 .layer1 img {
-  width: 14%;
-  height: 56%;
+  width: auto;
+  height: 77%;
   position: absolute;
   border-radius: 15px;
   z-index: 1;
+  transform: rotate(6deg);
   transition: z-index 0.3s, transform 0.3s;
-  filter: grayscale(1.5);
-  top: 125%;
+  filter: grayscale(2);
+  top: 12%;
 }
 .about-col-1 .layer1 img:hover {
   z-index: 0;
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(0deg);
   filter: grayscale(0);
 }
 
@@ -509,7 +523,8 @@ nav ul li a:hover::after {
 /* service */
 #services {
   width: 100%;
-  background: transparent;
+  /* background: transparent; */
+  backdrop-filter: blur(10px);
   border-radius: 25px;
   margin-left: 30px;
   margin-top: 50px;
@@ -566,7 +581,8 @@ nav ul li a:hover::after {
 /* Portfolio/My work */
 #portfolio {
   width: 100%;
-  background: transparent;
+  /* background: transparent; */
+  backdrop-filter: blur(10px);
   border-radius: 25px;
   margin-left: 30px;
   margin-top: 50px;
@@ -950,9 +966,10 @@ h1 {
 
 /* Live Chat Styles */
 .chat-container {
+  max-height: 70vh;
   position: fixed;
-  bottom: 120px;
-  right: 30px;
+  bottom: 160px;
+  right: 45px;
   width: 350px;
   background: white;
   border-radius: 12px;
@@ -961,7 +978,6 @@ h1 {
   flex-direction: column;
   z-index: 1001;
   overflow: hidden;
-  max-height: 70vh;
 }
 
 .chat-container.visible {
@@ -1326,146 +1342,3 @@ h1 {
 nav .fa-solid {
   display: none;
 }
-
-/* @media only screen and (max-width: 600px) {
-  #header {
-    background-image: url("mobilebanar.png");
-  }
-
-  p {
-    font-size: 20px;
-    margin-top: 330px;
-  }
-  #X {
-    color: #ffffff;
-    margin-top: 30px;
-  }
-
-  .header-text {
-    margin-top: 100%;
-    font-size: 16px;
-  }
-
-  .header-text h1 {
-    font-size: 30px;
-  }
-
-  nav {
-    width: 90%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: rgb(42, 51, 62);
-    padding: 10px;
-    margin-top: 10px;
-    margin-left: 0px;
-    border-radius: 60px;
-  }
-
-  .logo {
-    margin-top: 2px;
-  }
-
-  nav .fa-solid {
-    display: block;
-    font-size: 25px;
-    margin-right: 10px;
-  }
-
-  nav ul {
-    backdrop-filter: blur(10px);
-    position: fixed;
-    color: #ffffff;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    padding-top: 50px;
-    z-index: 2;
-    transition: right 0.3s;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 25px;
-  }
-
-  nav ul .fa-solid {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-  }
-
-  .sub-title {
-    font-size: 40px;
-  }
-
-  .about-col-1,
-  .about-col-2 {
-    flex-basis: 100%;
-  }
-
-  .about-col-1 {
-    margin-bottom: 30px;
-  }
-
-  .about-col-2 {
-    font-size: 14px;
-  }
-
-  .tab-links {
-    font-size: 16px;
-    margin-right: 20px;
-  }
-
-  .contect-left,
-  .contect-right {
-    flex-basis: 100%;
-  }
-  #scan-text {
-    margin-left: -6px;
-  }
-  .tab-links {
-    margin-top: -0px;
-  }
-
-  .work:hover .layer {
-    height: 150%;
-  }
-
-  #msg {
-    color: #d3092e;
-    margin-top: -40px;
-    display: block;
-  }
-
-  div #map {
-    border-radius: 20px;
-  }
-
-  #backToTop {
-    margin-right: 10px;
-  }
-
-  .help-btn {
-    width: 8%;
-    height: 3.5%;
-    margin-bottom: 55px;
-  }
-  .fa-comment {
-    margin-left: -4px;
-    margin-top: -2px;
-  }
-
-  #assistant {
-    margin-left: -4px;
-    margin-top: -2px;
-  }
-  .fa-microphone-lines {
-    margin-left: -4px;
-    margin-top: -2px;
-  }
-} */
