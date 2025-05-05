@@ -480,7 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (url) {
       const linkElement = document.createElement("a");
       linkElement.href = url;
-      linkElement.textContent = "Learn more →";
+      linkElement.textContent = "See Here →";
       linkElement.classList.add("answer-link");
       linkElement.target = "_blank";
       messageElement.appendChild(document.createElement("br"));
