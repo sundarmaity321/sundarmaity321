@@ -3,179 +3,531 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome To My Portfolio</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: "Poppins", sans-serif;
-        box-sizing: border-box;
-      }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #07252d;
-        color: white;
-      }
-      .typing-container {
-        /* font-size:30px; */
-        font-weight: bold;
-        position: relative;
-        font-size: 4em;
-        letter-spacing: 10px;
-        color: #0e3742;
-        text-transform: uppercase;
-        width: 100%;
-        text-align: center;
-        -webkit-box-reflect: below 1px linear-gradient(transparent, #000);
-        line-height: 0.7em;
-        outline: none;
-        animation: animate 5s linear infinite;
-      }
-      .cursor {
-        display: inline-block;
-        width: 5px;
-        height: 20px;
-        background-color: white;
-        margin-left: 5px;
-        animation: blink 0.8s infinite;
-      }
-      /* * Container for the button * */
-      .container {
-        position: absolute;
-        top: 80%;
-        left: 45%;
-        transform: translate(-50% -60%);
-      }
-
-      /* Glowing hyperlink styled as a button */
-      .glow-link-button {
-        display: inline-block;
-        padding: 12px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        background-color: #1e1e1e;
-        border: 2px solid #03bcf4;
-        border-radius: 30px;
-        box-shadow: 0 0 10px #03bcf4;
-        transition: all 0.1s ease;
-        position: relative;
-        overflow: hidden;
-        letter-spacing: 1.5px;
-        cursor: pointer;
-      }
-
-      /* Glow effect on hover */
-      .glow-link-button:hover {
-        background-color: #00ffcc;
-        color: #000000;
-        box-shadow: 0 0 20px #03bcf4, 0 0 30px #03bcf4 0 0 40px #03bcf4;
-        transform: scale(1.1);
-      }
-
-      @keyframes blink {
-        50% {
-          opacity: 0;
-        }
-      }
-      @keyframes animate {
-        0%,
-        18%,
-        20%,
-        50.1%,
-        60%,
-        65.15%,
-        80%,
-        90.1%,
-        92% {
-          color: #0e3742;
-          text-shadow: none;
-        }
-        18.1%,
-        20.1%,
-        30%,
-        50%,
-        60.1%,
-        65%,
-        80.1%,
-        90%,
-        92.1%,
-        100% {
-          color: #ffff;
-          text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
-            0 0 80px #03bcf4, 0 0 160px #03bcf4, 0 0 10px #03bcf4;
-        }
-      }
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 10px #03bcf4;
-        }
-        50% {
-          box-shadow: 0 0 25px #03bcf4;
-        }
-        100% {
-          box-shadow: 0 0 10px #03bcf4;
-        }
-      }
-    </style>
+    <title>BWU Portal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="typing-container">
-      <span id="text"></span>
-      <span class="cursor"></span>
+    <div class="container">
+      <!-- Mobile Menu Button -->
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <div class="profile-img">
+            <img src="Industry Visit (5).jpg" alt="Profile" />
+          </div>
+          <h3>Sundar Maity</h3>
+          <p>ID: BWU/DCS/23/029</p>
+        </div>
+
+        <ul class="sidebar-menu">
+          <li class="active" data-section="dashboard">
+            <i class="fas fa-home"></i> Dashboard
+          </li>
+          <li data-section="profile"><i class="fas fa-user"></i> Profile</li>
+          <li data-section="payment">
+            <i class="fas fa-credit-card"></i> Payment
+          </li>
+          <li data-section="assignment">
+            <i class="fas fa-tasks"></i> Assignment
+          </li>
+          <li class="has-submenu">
+            <div class="submenu-title">
+              <i class="fas fa-chart-bar"></i> Marks
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+              <li data-section="semester-marks">Semester</li>
+              <li data-section="class-test-marks">Class Test</li>
+              <li data-section="assignment-marks">Assignment</li>
+              <li data-section="presentation-marks">Presentation</li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <div class="submenu-title">
+              <i class="fas fa-calendar-check"></i> Attendance
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+              <li data-section="total-attendance">Total</li>
+              <li data-section="subject-attendance">Subject Wise</li>
+            </ul>
+          </li>
+          <li data-section="class-notes">
+            <i class="fas fa-book"></i> Class Notes
+          </li>
+          <li data-section="notice">
+            <i class="fas fa-bell"></i> Important Notice
+          </li>
+        </ul>
+
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Dashboard Section (Default View) -->
+        <div class="content-section active" id="dashboard-section">
+          <h2 style="color: aliceblue">Welcome to,</h2>
+          <h1 style="color: aliceblue">BRAINWARE UNIVERSITY</h1>
+          <br />
+
+          <div class="dashboard-cards">
+            <!-- Student Card -->
+            <div class="glass-card student-card">
+              <div class="student-info">
+                <div class="student-img">
+                  <img src="Industry Visit (5).jpg" alt="Student" />
+                </div>
+                <div class="student-details">
+                  <h2>Sundar Maity</h2>
+                  <p>Computer Science & Engineering</p>
+                  <p>Diploma in Computer Science & Engineering</p>
+                  <p>ID: BWU/DCS/23/029</p>
+                  <p>Batch: 2023</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Status -->
+            <div class="glass-card payment-status">
+              <h2><i class="fas fa-credit-card"></i> Payment Status</h2>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+              <p>75% fees paid</p>
+              <p>Due: $250 (15th June 2023)</p>
+              <button class="btn pay-now-btn">Pay Now</button>
+            </div>
+
+            <!-- Attendance Summary -->
+            <div class="glass-card attendance-summary">
+              <h2><i class="fas fa-calendar-check"></i> Attendance</h2>
+              <div class="attendance-progress">
+                <div class="circular-progress" data-percent="85">
+                  <svg class="progress-circle" width="100" height="100">
+                    <circle class="progress-circle-bg" cx="50" cy="50" r="40" />
+                    <circle
+                      class="progress-circle-fill"
+                      cx="50"
+                      cy="50"
+                      r="40"
+                    />
+                  </svg>
+                  <div class="progress-text">85%</div>
+                </div>
+              </div>
+              <p>Total Classes: 120</p>
+              <p>Attended: 102</p>
+              <button class="btn view-details-btn">View Details</button>
+            </div>
+
+            <!-- Academic Performance -->
+            <div class="glass-card academic-performance">
+              <h2>
+                <i class="fas fa-graduation-cap"></i> Academic Performance
+              </h2>
+              <div class="performance-metrics">
+                <div class="metric">
+                  <h3>Last Semester</h3>
+                  <p class="score">3.75</p>
+                  <p>SGPA</p>
+                </div>
+                <div class="metric">
+                  <h3>Overall</h3>
+                  <p class="score">3.68</p>
+                  <p>CGPA</p>
+                </div>
+              </div>
+              <button class="btn view-marks-btn">View All Marks</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="content-section" id="profile-section">
+          <div class="section-header">
+            <h1><i class="fas fa-user"></i> Profile</h1>
+            <button class="btn edit-btn">Edit Profile</button>
+          </div>
+
+          <div class="glass-card profile-form">
+            <form id="profileForm">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  value="Sundar Maity"
+                  writeonly
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="studentId">Student ID</label>
+                  <input
+                    type="text"
+                    id="studentId"
+                    value="BWU/DCS/23/029"
+                    writeonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="batch">Batch</label>
+                  <input type="text" id="batch" value="2023" writeonly />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="department">Department</label>
+                <input
+                  type="text"
+                  id="department"
+                  value="Computer Science & Engineering"
+                  writeonly
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="program">Program Name</label>
+                <input
+                  type="text"
+                  id="program"
+                  value="Diploma in Computer Science & Engineering"
+                  writeonly
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    value="john.doe@university.edu"
+                    writeonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    value="+91 9876543210"
+                    writeonly
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="abc-id">ABC ID</label>
+                  <input type="text" id="abc-id" value="1234567890" writeonly />
+                </div>
+                <div class="form-group">
+                  <label for="abc-id">ABC ID</label>
+                  <input type="text" id="abc-id" value="1234567890" writeonly />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" writeonly>
+123 University Ave, Campus Town</textarea
+                >
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" id="dob" value="2004-04-10" writeonly />
+                </div>
+                <div class="form-group">
+                  <label for="bloodGroup">Blood Group</label>
+                  <!-- <input type="text" id="bloodGroup" value="O+" writeonly /> -->
+                  <select
+                    name="bloodGroup"
+                    id="bloodGroup"
+                    value="O+"
+                    writeonly
+                  >
+                    <option value="AB+" style="color: black">AB+</option>
+                    <option value="AB-" style="color: black">AB-</option>
+                    <option value="B+" style="color: black">A+</option>
+                    <option value="B-" style="color: black">A-</option>
+                    <option value="B+" style="color: black">B+</option>
+                    <option value="B-" style="color: black">B-</option>
+                    <option value="O+" style="color: black">O+</option>
+                    <option value="O-" style="color: black">O-</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button
+                  type="button"
+                  class="btn cancel-btn"
+                  style="display: none"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn save-btn"
+                  style="display: none"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="content-section" id="payment-section">
+          <div class="section-header">
+            <h1><i class="fas fa-credit-card"></i> Payment</h1>
+          </div>
+
+          <div class="glass-card payment-history">
+            <h2>Payment History</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Semester</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Receipt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>15 Jan 2023</td>
+                  <td>Spring 2023</td>
+                  <td>$1,200</td>
+                  <td><span class="status paid">Paid</span></td>
+                  <td><button class="btn receipt-btn">Download</button></td>
+                </tr>
+                <tr>
+                  <td>15 Mar 2023</td>
+                  <td>Spring 2023</td>
+                  <td>$800</td>
+                  <td><span class="status paid">Paid</span></td>
+                  <td><button class="btn receipt-btn">Download</button></td>
+                </tr>
+                <tr>
+                  <td>15 Jun 2023</td>
+                  <td>Summer 2023</td>
+                  <td>$1,000</td>
+                  <td><span class="status pending">Pending</span></td>
+                  <td>
+                    <button class="btn receipt-btn" disabled>Download</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="glass-card payment-methods">
+            <h2>Payment Methods</h2>
+            <div class="payment-options">
+              <div class="payment-option active">
+                <i class="fas fa-credit-card"></i>
+                <span>Credit Card</span>
+              </div>
+              <div class="payment-option">
+                <i class="fas fa-university"></i>
+                <span>Bank Transfer</span>
+              </div>
+              <div class="payment-option">
+                <i class="fab fa-paypal"></i>
+                <span>PayPal</span>
+              </div>
+            </div>
+
+            <div class="credit-card-form">
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input
+                  type="text"
+                  id="cardNumber"
+                  placeholder="1234 5678 9012 3456"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiryDate">Expiry Date</label>
+                  <input type="text" id="expiryDate" placeholder="MM/YY" />
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" placeholder="123" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cardName">Name on Card</label>
+                <input type="text" id="cardName" placeholder="John Doe" />
+              </div>
+
+              <button class="btn pay-now-btn">Pay $1,000 Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assignment Section -->
+        <div class="content-section" id="assignment-section">
+          <div class="section-header">
+            <h1><i class="fas fa-tasks"></i> Assignments</h1>
+          </div>
+
+          <div class="assignment-filters">
+            <button class="btn filter-btn active">All</button>
+            <button class="btn filter-btn">Pending</button>
+            <button class="btn filter-btn">Submitted</button>
+            <button class="btn filter-btn">Graded</button>
+          </div>
+
+          <div class="glass-card assignment-list">
+            <div class="assignment-item">
+              <div class="assignment-info">
+                <h3>Data Structures Project</h3>
+                <p class="course">CSE 201 - Data Structures</p>
+                <p class="due-date">
+                  <i class="far fa-calendar-alt"></i> Due: 15 June 2023
+                </p>
+                <p class="status pending">Status: Pending</p>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn view-btn">View Details</button>
+                <button class="btn submit-btn">Submit</button>
+              </div>
+            </div>
+
+            <div class="assignment-item">
+              <div class="assignment-info">
+                <h3>Database Design Assignment</h3>
+                <p class="course">CSE 301 - Database Systems</p>
+                <p class="due-date">
+                  <i class="far fa-calendar-alt"></i> Due: 10 June 2023
+                </p>
+                <p class="status submitted">Status: Submitted</p>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn view-btn">View Details</button>
+              </div>
+            </div>
+
+            <div class="assignment-item">
+              <div class="assignment-info">
+                <h3>Algorithms Problem Set</h3>
+                <p class="course">CSE 202 - Algorithms</p>
+                <p class="due-date">
+                  <i class="far fa-calendar-alt"></i> Due: 5 June 2023
+                </p>
+                <p class="status graded">Status: Graded (85/100)</p>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn view-btn">View Details</button>
+                <button class="btn feedback-btn">View Feedback</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marks Sections -->
+        <div class="content-section" id="semester-marks-section">
+          <div class="section-header">
+            <h1><i class="fas fa-chart-bar"></i> Semester Marks</h1>
+          </div>
+          <div class="glass-card">
+            <p>Semester marks content goes here...</p>
+          </div>
+        </div>
+
+        <div class="content-section" id="class-test-marks-section">
+          <div class="section-header">
+            <h1><i class="fas fa-chart-bar"></i> Class Test Marks</h1>
+          </div>
+          <div class="glass-card">
+            <p>Class test marks content goes here...</p>
+          </div>
+        </div>
+
+        <div class="content-section" id="assignment-marks-section">
+          <div class="section-header">
+            <h1><i class="fas fa-chart-bar"></i> Assignment Marks</h1>
+          </div>
+          <div class="glass-card">
+            <p>Assignment marks content goes here...</p>
+          </div>
+        </div>
+
+        <div class="content-section" id="presentation-marks-section">
+          <div class="section-header">
+            <h1><i class="fas fa-chart-bar"></i> Presentation Marks</h1>
+          </div>
+          <div class="glass-card">
+            <p>Presentation marks content goes here...</p>
+          </div>
+        </div>
+
+        <!-- Attendance Sections -->
+        <div class="content-section" id="total-attendance-section">
+          <div class="section-header">
+            <h1><i class="fas fa-calendar-check"></i> Total Attendance</h1>
+          </div>
+          <div class="glass-card">
+            <p>Total attendance content goes here...</p>
+          </div>
+        </div>
+
+        <div class="content-section" id="subject-attendance-section">
+          <div class="section-header">
+            <h1>
+              <i class="fas fa-calendar-check"></i> Subject Wise Attendance
+            </h1>
+          </div>
+          <div class="glass-card">
+            <p>Subject wise attendance content goes here...</p>
+          </div>
+        </div>
+
+        <!-- Class Notes Section -->
+        <div class="content-section" id="class-notes-section">
+          <div class="section-header">
+            <h1><i class="fas fa-book"></i> Class Notes</h1>
+          </div>
+          <div class="glass-card">
+            <p>Class notes content goes here...</p>
+          </div>
+        </div>
+
+        <!-- Notice Section -->
+        <div class="content-section" id="notice-section">
+          <div class="section-header">
+            <h1><i class="fas fa-bell"></i> Important Notice</h1>
+          </div>
+          <div class="glass-card">
+            <p>Important notice content goes here...</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container" id="btn">
-      <a
-        href="Portfolio/Index.html"
-        class="glow-link-button"
-        onclick="explore()"
-        >Explore</a
-      >
-    </div>
-
-    <script>
-      const words = [
-        "Hello!🥰",
-        "Welcome To My Portfolio🙏🏻",
-        "I'm SUNDAR MAITY...",
-      ];
-      let wordIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      const speed = 150;
-      const delay = 1000;
-      const textElement = document.getElementById("text");
-
-      function typeEffect() {
-        const currentWord = words[wordIndex];
-
-        if (isDeleting) {
-          textElement.textContent = currentWord.substring(0, charIndex--);
-        } else {
-          textElement.textContent = currentWord.substring(0, charIndex++);
-        }
-
-        if (!isDeleting && charIndex === currentWord.length + 1) {
-          isDeleting = true;
-          setTimeout(typeEffect, delay);
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
-          setTimeout(typeEffect, 200);
-        } else {
-          setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
-        }
-      }
-      function explore() {
-        alert("This Portfolio Make For Desktop or Laptop Only.");
-      }
-      typeEffect();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
