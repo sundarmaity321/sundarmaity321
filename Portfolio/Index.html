@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundar Maity</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/9d46e860c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="Top">
+    <!-- <div class="ticker-container">
+        <div class="ticker-text" id="tickerText">
+            WEB DEVELOPER - APP DESIGNER - UI DESIGNER - BENGALI(First Language) - English(Second Language) - Hindi(Third Language) &nbsp;
+        </div>
+    </div> -->
+<div id="blinker" class="shadow-on">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/PortfolioLogo.png" alt="My Logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#contect">Contact</a></li> 
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <!-- <p>WEB DEVELOPER</p>  -->
+                <h1>Hi, I'm <span id="my-name">
+                    <span id="text"></span>
+                    <span class="cursor"></span>
+                    </span><br> from Haldia,WB</h1>
+            </div>
+            <div class="#">
+                    <a href="Sundar Maity CV (org).pdf" class="download-btn" id="cv" download>
+                        <span id="download">Download CV</span>
+                    </a>
+                </div>
+            <div class="sosial-icons">
+                <a href="https://wa.link/jmwfw1" title="Click Here To Message Me On WhatsApp" target=""><i
+                        class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100084006797950"
+                    title="Click Here To Visit My Facebook Profile" target=""><i
+                        class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/sundarmaity321/?hl=en"
+                    title="Click Here To Visit My Instagram Profile" target=""><i
+                        class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sundar-maity-a6430a243/"
+                    title="Click Here To Visit My LinkedIn Profile" target=""><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/sundarmaity321"
+                    title="Click Here To Visit My GitHub Profile" target=""><i 
+                        class="fa-brands fa-square-github"></i></a>
+            </div>
+            <div><img src="./images/formal photo 2.png" alt="my Formal Image" class="formal-img"></div>
+        </div>
+    </div>
+</div>
+
+<!-- About Portion -->
+
+    <div id="about" style="border-radius: 25px;">
+        <div class="container">
+            <div class="row">
+                    <div class="about-col-1">
+                        <div class="layer1">
+                            <div class="blur"></div>
+                            <img src="./images/MyPhoto.jpg" alt="My Photo" title="My Photo" class="my-photo">
+                        </div>
+                    </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span id="xyz">Me</span></h1>
+                    <p id="X" style="color: white;">I am Sundar Maity, a passionate web developer from Haldia, West Bengal. I am pursuing my Diploma in Computer Science and Engineering, and I'm in my final year. I'm a quick learner and always eager to take on new challenges.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certificats')">Certificats</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="skill-container">
+                            <div class="skill" data-skill="100%">
+                                <div class="skill-name"><span>HTML</span></div>
+                                    <div id="html">
+                                        <div class="skill-bar">
+                                            <div class="skill-level html">100%</div>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="skill" data-skill="100%">
+                                <div class="skill-name"><span>CSS</span></div>
+                                    <div id="css">
+                                        <div class="skill-bar">
+                                            <div class="skill-level css">100%</div>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="skill" data-skill="100%">
+                                <div class="skill-name"><span>JavaScript</span></div>
+                                    <div id="js">
+                                        <div class="skill-bar">
+                                            <div class="skill-level javascript">100%</div>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="skill" data-skill="100%">
+                                <div class="skill-name"><span>Python</span></div>
+                                    <div id="python">
+                                        <div class="skill-bar">
+                                          <div class="skill-level python">100%</div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul style="color: white;">
+                            <li><span>Web Design</span><br>No Experience</li>
+                            <li><span>Web Design</span><br>No Experience</li>
+                            <li><span>Web Design</span><br>No Experience</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul style="color: white;">
+                            <li><span>2023-Present</span> Diploma in Computer Science And Engineering<br> Web Development <!-- Corrected -->
+                            </li>
+                            <li><span>2021-Drop-2025</span> Higher Secondary <br> Science Subjects</li>
+                            <li><span>2020-2021</span> Secondary Education <br> All Board Subjects</li> 
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificats">
+                        <ul class="ul-certificat">
+                            <div class="icon-button" title="Certificat 1" onclick="openPopup('./certificate/certificate 1.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 2" onclick="openPopup('./certificate/certificate 2.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 3" onclick="openPopup('./certificate/certificate 3.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 4" onclick="openPopup('./certificate/certificate 4.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 5" onclick="openPopup('./certificate/certificate 5.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 6" onclick="openPopup('./certificate/certificate 6.jpg')">+</div>
+
+                            <div class="popup" id="popup" onclick="closePopup()">
+                            <img id="popup-img" src="" alt="Popup Image" />
+                            </div>
+                        </ul>        
+                        <ul class="ul-certificat">
+                            <div class="icon-button" title="Certificat 7" onclick="openPopup('./certificate/certificate 7.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 8" onclick="openPopup('./certificate/certificate 8.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 9" onclick="openPopup('./certificate/certificate 9.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 10" onclick="openPopup('./certificate/certificate 10.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 11" onclick="openPopup('./certificate/certificate 11.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 12" onclick="openPopup('./certificate/certificate 12.jpg')">+</div>
+
+                            <div class="popup" id="popup" onclick="closePopup()">
+                            <img id="popup-img" src="" alt="Popup Image" />
+                            </div>
+                        </ul>        
+                        <ul class="ul-certificat">
+                            <div class="icon-button" title="Certificat 13" onclick="openPopup('./certificate/certificate 13.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 14" onclick="openPopup('./certificate/certificate 14.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 15" onclick="openPopup('./certificate/certificate 15.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 16" onclick="openPopup('./certificate/certificate 16.jpg')">+</div>
+                            <div class="icon-button" title="Certificat 17" onclick="openPopup('./certificate/certificate 18.jpg')">+</div>
+                            <div class="icon-button" title="Certificat scnnar" onclick="openPopup('./certificate/Certificats scnnar.png')">+</div>
+
+                            <div class="popup" id="popup" onclick="closePopup()">
+                            <img id="popup-img" src="" alt="Popup Image" />
+                            </div>
+                        </ul>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My <span id="xyz">Services</span></h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2> <!-- Corrected -->
+                    <p id="X">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut itaque debitis assumenda? Harum,
+                        quisquam quia pariatur nam delectus iure rerum cupiditate exercitationem at, inventore sunt
+                        repellendus labore, culpa quo voluptate!</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Design</h2>
+                    <p id="X">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut itaque debitis assumenda? Harum,
+                        quisquam quia pariatur nam delectus iure rerum cupiditate exercitationem at, inventore sunt
+                        repellendus labore, culpa quo voluptate!</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI Design</h2>
+                    <p id="X">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut itaque debitis assumenda? Harum,
+                        quisquam quia pariatur nam delectus iure rerum cupiditate exercitationem at, inventore sunt
+                        repellendus labore, culpa quo voluptate!</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio/My Work -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My <span id="xyz">Work</span></h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/Calculator/Calculater Img.jpg" alt="Basic Calculator" title="My Work 1"> <!-- Corrected -->
+                    <div class="layer">
+                        <h3>Basic Scientific Calculator</h3>
+                        <p>It's Calculate Basic mathematics and basic Scientific calculations.</p>
+                        <a href="/Calculator/Index.html"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/Text2Image/T2I.png" alt="Text2ImageGenerator" title="My Work 2">
+                    <div class="layer">
+                        <h3>Text2ImageGenerator</h3>
+                        <p>You can generate photo as your visualization. Just enter your think and generate
+                            image.</p>
+                        <a href="/Text2Image/Index.html"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/Virtual Maths Teacher/20.png" alt="My Work 3" title="My Work 3">
+                    <div class="layer">
+                        <h3>Virtual Math Teacher</h3>
+                        <p>I'm Virtual Math Teacher, You Can Solve Your Problem, I'll Help You To Solve Any
+                            Mathematical Problems.</p>
+                        <a href="/Virtual Maths Teacher/index.html"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn" title="Click Here to See More">See More  <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    </div>
+
+<!-- contact portion -->
+ 
+<div id="contect">
+    <div class="container">
+        <div class="row2">
+            <div class="contect-left">
+                <h1 class="sub-title">Get in <span id="xyz">Touch</span></h1>
+                <p><i class="fa-regular fa-envelope"></i><span>Email:</span> sundarmaity111@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i><span>Phone number:</span> +91 7319185590</p>
+                <p><i class="fa-brands fa-whatsapp"></i><span>WhatsApp number:</span> +91 8653021830</p>
+                <div class="social-icon">
+                    <a href="https://www.facebook.com/profile.php?id=100084006797950"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.link/jmwfw1"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/sundarmaity321/?hl=en"><i class="fa-brands fa-instagram"></i></i></a>
+                    <a href="https://www.linkedin.com/in/sundar-maity-a6430a243/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/sundarmaity321"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="Sundar Maity CV (org).pdf" download class="btn btn2" title="Click Here To Download My CV"><i
+                    class="fa-regular fa-file"></i> Download CV</a>
+                    <div id="qr">
+                        <img src="./images/sundarmaity cv qr.png" alt="QR To See My CV" id="qrimg" title="Scan QR To See My CV">
+                        <h2 id="scan-text"></h2>
+                    </div>
+            </div>
+            <div class="contect-right">
+                <form name="submit-to-google-sheet" action="">
+                    <div class="fill-up">
+                        <input type="text" name="Name" placeholder="Enter Your Full Name*" required>
+                        <input type="text" name="E-mail" placeholder="Enter Your E-mail*" required>
+                        <input type="text" name="Phone Number" placeholder="Enter Your Mobile Number*" required>
+                        <textarea name="Message" rows="4" placeholder="Leave Your Message"></textarea>
+                        <button type="submit" class="btn btn2" title="Click Here To Submit The Form"><i class="fa-solid fa-file-export"></i>submit</button>
+                    </div>
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d337.04089728365807!2d88.02398127552304!3d22.12874038922268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDA3JzQzLjYiTiA4OMKwMDEnMjYuOCJF!5e1!3m2!1sen!2sin!4v1741284939560!5m2!1sen!2sin"
+                            class="map-iframe" allowfullscreen="" id="map"
+                            title="Google Maps Location"></iframe>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- backToTop -->
+            <button id="backToTop" class="back-to-top" aria-label="Back to top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19V5M5 12l7-7 7 7"/>
+                </svg>
+            </button>
+
+        <!-- Scroll To Top Button END -->
+            <button class="floating-btn" id="goToBottomBtn" aria-label="Go to bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </button>
+
+        <!-- Help Center -->
+        <div class="help-button-container">
+            <button id="helpButton" class="help-button" aria-label="Help Center">
+            <i class="fas fa-question"></i>
+            </button>
+            <div class="help-options">
+            <a href="/AdvanceAi ChatBot/Index.html" class="help-option"
+                ><i class="fa-brands fa-bots"></i>AI ChatBot</a
+            >
+            <a href="#" class="help-option" id="liveChatOption"
+                ><i class="fas fa-comments"></i> Live Chat</a
+            >
+            <a href="#contect" class="help-option"
+                ><i class="fas fa-envelope"></i> Contact Me</a
+            >
+            </div>
+        </div>
+
+        <!-- Live Chat Container -->
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+            <h3>Live Chat Support</h3>
+            <button id="closeChat" class="close-chat" title="Close Chat" aria-label="Close Chat">
+                <i class="fas fa-times"></i>
+            </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot-message">
+                Hi there! Here are some common questions to know about me:
+            </div>
+            </div>
+            <div class="quick-questions" id="quickQuestions">
+            <!-- Quick questions will be inserted here by JavaScript -->
+            </div>
+            <div class="chat-input">
+            <!-- <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+                autocomplete="off"
+            />
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button> -->
+            </div>
+        </div>
+            
+        <!-- Floating Toggle Button -->
+            <button id="weatherToggle" title="Weather">🌤️</button>
+
+            <!-- Weather Widget Popup -->
+            <div class="weather-widget" id="weatherWidget">
+              <button class="toggle-theme" id="themeToggle">🌙</button>
+              <h3>Weather Info</h3>
+              <p class="loading">Fetching location...</p>
+              <p id="location"></p>
+              <p id="temp"></p>
+              <p id="desc"></p>
+              <img id="icon" class="weather-icon" src="" alt="" />
+
+              <div class="widget-inputs">
+                <input type="text" id="cityInput" placeholder="Enter City Name" />
+                <button id="searchBtn">🔍</button>
+              </div>
+            </div>
+        <!-- <div class="copy-write">
+            <p>Thank You For Visiting My Portfolio 🥰🙏</p>
+        </div> -->
+
+<!-- Java Script Portion -->
+ <script src="script.js"></script>
+    <script>
+        // Blinker
+        const blinker = document.getElementById("blinker");
+        setInterval(() => {
+            blinker.classList.toggle("shadow-on");
+            blinker.classList.toggle("shadow-off");
+        }, 500); // Change every 500ms
+        //   Blinker END
+    </script>
+                    <!-- About Menu -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <!-- script for menu button -->
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- Script For Contact form -->
+
+    <script>
+        
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwIjqBkRkjwnxkauCrDaa1Vu_9RZYwtRzT29LSBe9pxYWoeuj1EIlA4QYhCilUNU2BPAw/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Your Message Submitted Successfully!🥰"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+     <script>
+        const ticker = document.getElementById("tickerText");
+        const clone = ticker.cloneNode(true);
+        ticker.parentNode.appendChild(clone);
+     </script>
+</body>
+</html>
